@@ -1,0 +1,47 @@
+<header class="app-header navbar">
+    <button class="navbar-toggler mobile-sidebar-toggler d-lg-none" type="button">&#9776;</button>
+    <a class="navbar-title" ui-sref="app.main">Pour une loi de liberté</a>
+    <ul class="nav navbar-nav d-md-down-none">
+        <li class="nav-item">
+            <a class="nav-link navbar-toggler sidebar-toggler" href="#">&#9776;</a>
+        </li>
+
+        <li class="nav-item px-3">
+            <a class="nav-link" ui-sref="app.main">Dashboard</a>
+        </li>
+        <li class="nav-item px-3">
+            <a class="nav-link" href="#">Users</a>
+        </li>
+        <li class="nav-item px-3">
+            <a class="nav-link" href="#">Settings</a>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav ml-auto d-md-down-none">
+
+        <li class="nav-item dropdown" ng-controller="AuthCtrl">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <img src="img/avatars/6.png" class="img-avatar" alt="{{currentUser.email}}">
+                <span class="d-md-down-none">{{currentUser.name}}</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+
+
+
+                <div class="dropdown-header text-center">
+                    <strong>Settings</strong>
+                </div>
+
+                <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Setting</a>
+
+                <div class="divider"></div>
+
+                <a class="dropdown-item" href="#" ng-click="logout()"><i class="fa fa-lock"></i> Logout</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link navbar-toggler aside-menu-toggler" href="#">&#9776;</a>
+        </li>
+
+    </ul>
+</header>
